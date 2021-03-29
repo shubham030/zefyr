@@ -669,7 +669,7 @@ abstract class EditorState extends State<RawEditor> {
   RenderEditor get renderEditor;
   EditorTextSelectionOverlay get selectionOverlay;
   bool showToolbar();
-  void hideToolbar();
+  void hideToolbar([bool x]);
   void requestKeyboard();
 }
 
@@ -1172,6 +1172,11 @@ class RawEditorState extends EditorState
     } else {
       return theme.lists.spacing;
     }
+  }
+
+  @override
+  void userUpdateTextEditingValue(TextEditingValue value, SelectionChangedCause cause) {
+    // TODO: implement userUpdateTextEditingValue
   }
 }
 
